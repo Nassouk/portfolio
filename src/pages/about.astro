@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="À propos de moi | Kharfouche Nassim" description="À propos de moi">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero title="Mes compétences" tagline="" />
+
+			<section class="skills">
+				<div class="skill-grid">
+					<!-- Développement Web -->
+					<div class="skill-category">
+						<h3>Développement Web</h3>
+						<div class="skill">
+							<span class="skill-name">HTML</span>
+							<span class="skill-level">Débutant</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">CSS</span>
+							<span class="skill-level">Débutant</span>
+						</div>
+					</div>
+
+					<!-- Web Design -->
+					<div class="skill-category">
+						<h3>Web Design</h3>
+						<div class="skill">
+							<span class="skill-name">Photoshop</span>
+							<span class="skill-level">Intermédiaire</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Sécurisation réseau</span>
+							<span class="skill-level">Bases</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Sécurisation réseaux locaux</span>
+							<span class="skill-level">Bases</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Adobe Premiere</span>
+							<span class="skill-level">Avancé</span>
+						</div>
+					</div>
+
+					<!-- Langues -->
+					<div class="skill-category">
+						<h3>Langues</h3>
+						<div class="skill">
+							<span class="skill-name">Français</span>
+							<span class="skill-level">Natif</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Anglais</span>
+							<span class="skill-level">C1</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Espagnol</span>
+							<span class="skill-level">A2</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Italien</span>
+							<span class="skill-level">A2</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Arabe</span>
+							<span class="skill-level">Natif</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	.skills {
+		width: 100%;
+	}
+
+	.skill-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	@media (min-width: 768px) {
+		.skill-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.skill-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.skill-category {
+		background: #ffffff10;
+		border: 1px solid var(--gray-600);
+		border-radius: 12px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(4px);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.skill-category:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+	}
+
+	.skill-category h3 {
+		margin-bottom: 1rem;
+		color: var(--gray-0);
+		font-size: 1.5rem;
+		border-bottom: 1px solid var(--gray-600);
+		padding-bottom: 0.5rem;
+	}
+
+	.skill {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid var(--gray-600);
+	}
+
+	.skill:last-child {
+		border-bottom: none;
+	}
+
+	.skill-name {
+		font-weight: 500;
+	}
+
+	.skill-level {
+		color: var(--gray-400);
+		font-size: 0.9rem;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			padding: 2rem 4rem;
+		}
+	}
+</style>

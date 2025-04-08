@@ -1,0 +1,65 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.3rem" gradient />
+		<h2>Rapport au code</h2>
+		<p> Passionné par les nouvelles technologies, j'ai entrepris d'apprendre les bases de la programmation en autodidacte. Cependant, je suis conscient que pour atteindre un niveau 
+			de compétence avancé et pour m'intégrer professionnellement dans ce domaine, il est essentiel de suivre une 
+			formation structurée et reconnue.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="student" color="var(--accent-regular)" size="2.3rem" gradient />
+		<h2>Cursus scolaire</h2>
+		<p>Grâce à mes années dans le domaine du droit, j'ai pu acquérir des compétences analytiques. Celles-ci,  bien que très 
+			utiles dans le domaine juridique, m'ont également révélé mon intérêt croissant pour l'informatique et la technologie.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="lego" color="var(--accent-regular)" size="2.3rem" gradient />
+		<h2>Hobbies</h2>
+		<p> En dehors de mon parcours professionnel, je suis passionné par la lecture (philosophie, droit, comics) qui stimule ma réflexion et ma culture générale. Je pratique régulièrement le rugby et la natation pour leur exigence physique. Enfin, ma passion pour le gaming, en particulier les MMORPG et les jeux de stratégie, nourrit ma créativité et développe mes compétences en gestion et prise de décision.<p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
