@@ -1,5 +1,5 @@
 ---
-title: Boulangerie 
+title: Boulangerie - La Gourmandise 
 publishDate: 2025-04-05 00:00:00
 img: /assets/stock-2.jpg
 img_alt: image d'une boulangerie
